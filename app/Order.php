@@ -11,7 +11,7 @@ class Order extends Model {
 
         static::created(function(){
         Event::fire(Events\OrderSubmitted::class);
-        })
+        });
     }
 
     public function user() {
