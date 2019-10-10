@@ -23,7 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data['games'] = Game::all();
-        return view('home', $data);
+        return view('home');
     }
 }
