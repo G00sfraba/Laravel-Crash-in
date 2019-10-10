@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class GamesTableSeeder extends Seeder {
+class GamesOrdersTableSeeder extends Seeder {
 
     /**
      * Run the database seeds.
@@ -10,11 +10,11 @@ class GamesTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
-
         for ($i = 0; $i < 10; $i++) {
-            DB::table('games')->insert(
-                    ['name' => 'Game_name_' . Str::random(10),
-                     'genere' => 'Game_genere_' . Str::random(10),]
+            DB::table('game_order')->insert(
+                    ['game_id' => rand(1, 10),
+                        'order_id' => rand(1, 10),
+                    ]
             );
         }
     }

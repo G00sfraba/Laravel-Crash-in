@@ -7,4 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Game extends Model
 {
     
+    public function orders(){
+        return $this->belongsToMany(Order::class);
+    }
 }
