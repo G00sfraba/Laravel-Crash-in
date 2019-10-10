@@ -10,7 +10,7 @@ class Order extends Model {
         parent::boot();
 
         static::created(function(){
-        Event::fire(Notifications\OrderSubmitted::class);
+        Event::fire(Events\OrderSubmitted::class);
         })
     }
 
@@ -19,7 +19,7 @@ class Order extends Model {
     }
 
     public function games() {
-        return $this->belongsToMany(Game::class);
+        return $this->belongsToMany(Game::class); 
     }
 
 }
