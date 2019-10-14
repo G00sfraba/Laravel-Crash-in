@@ -1,5 +1,5 @@
 <div class="col-md-12">
-    <table>
+    <table class="table table-bordered">
         <thead>
         <td>Date</td>
         <td>Total Price</td>
